@@ -1,0 +1,83 @@
+.termometer {
+  width: 15px;
+  height: 350px;
+  top: 50%;
+  right: 3%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 50px;
+  border: 2px solid white;
+  position: absolute;
+  -webkit-box-shadow: inset 0 0 5px white;
+          box-shadow: inset 0 0 5px white;
+  z-index: 1;
+}
+
+.termometer__fill {
+  position: absolute;
+  width: 100%;
+  height: 42%;
+  bottom: 0;
+  background: red;
+  -webkit-box-shadow: inset 0 0 5px white;
+          box-shadow: inset 0 0 5px white;
+  border-radius: 5px;
+}
+
+.termometer__tank {
+  position: absolute;
+  bottom: -5%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  -webkit-box-shadow: 0 0 0 2px white;
+          box-shadow: 0 0 0 2px white;
+  border-radius: 50%;
+  background: red;
+  z-index: -1;
+}
+
+.termometer__tank--fill-red {
+  z-index: 1;
+  -webkit-box-shadow: inset 0 0 10px 1px #ffe8e8;
+          box-shadow: inset 0 0 10px 1px #ffe8e8;
+}
+
+.termometer--number {
+  position: absolute;
+  left: 200%;
+  width: auto;
+  width: 50px;
+  color: white;
+}
+
+.termometer__number-one {
+  top: 0%;
+}
+
+.termometer__number-two {
+  top: 14%;
+}
+
+.termometer__number-three {
+  top: 28%;
+}
+
+.termometer__number-four {
+  top: 42%;
+}
+
+.termometer__number-five {
+  top: 56%;
+}
+
+.termometer__number-six {
+  top: 70%;
+}
+
+.termometer__number-seven {
+  top: 84%;
+}
+/*# sourceMappingURL=Termometer.css.map */

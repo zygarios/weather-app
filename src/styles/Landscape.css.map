@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,CAAC;EACT,MAAM,EAAE,IAAI;CAUb;;AARE,AAAD,iBAAQ,CAAC;EAMP,KAAK,EAAE,IAAI;CACZ",
+    "sources": [
+        "Landscape.scss"
+    ],
+    "names": [],
+    "file": "Landscape.css"
+}
