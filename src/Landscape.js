@@ -1,5 +1,7 @@
 import React from 'react';
 import './styles/Landscape.css';
+import GrassItem from './weatherType/GrassItem';
+import birds from './img/birds.gif';
 
 import ClearSky from './weatherType/ClearSky.js';
 import FewClouds from './weatherType/FewClouds.js';
@@ -14,6 +16,7 @@ import Mist from './weatherType/Mist.js';
 function Landscape(props) {
   let showWeather;
   const weatherType = 'clear sky';
+  //tymczasowa wartość stała bez fetchowania
   // switch (props.weatherType) {
   switch (weatherType) {
     case 'clear sky':
@@ -50,7 +53,8 @@ function Landscape(props) {
   }
   return (
     <div className="landscape">
-      <div className="landscape__grass" alt="grass" />
+      <GrassItem></GrassItem>
+      <img className="birds" src={birds} alt="birds" />
       {showWeather}
     </div>
   );

@@ -1,13 +1,110 @@
 .landscape {
   height: 100%;
 
-  &__grass {
+  &__grassland {
     position: absolute;
     width: 100%;
     height: 40%;
     bottom: 0;
     background: url("../img/grassland.png") no-repeat top;
     transform-origin: 50% 100%;
+  }
+
+  @keyframes grassWind-close {
+    0% {
+      transform: translate(-50%, 20%) scale(2) skew(-6deg);
+    }
+
+    50% {
+      transform: translate(-50%, 20%) scale(2) skew(6deg);
+    }
+
+    100% {
+      transform: translate(-50%, 20%) scale(2) skew(-6deg);
+    }
+  }
+
+  @keyframes grassWind-normal {
+    0% {
+      transform: translate(-50%, 20%) scale(1.75) skew(6deg);
+    }
+
+    50% {
+      transform: translate(-50%, 20%) scale(1.75) skew(-6deg);
+    }
+
+    100% {
+      transform: translate(-50%, 20%) scale(1.75) skew(6deg);
+    }
+  }
+
+  @keyframes grassWind-far {
+    0% {
+      transform: translate(-50%, 20%) scale(1.5) skew(-6deg);
+    }
+
+    50% {
+      transform: translate(-50%, 20%) scale(1.5) skew(6deg);
+    }
+
+    100% {
+      transform: translate(-50%, 20%) scale(1.5) skew(-6deg);
+    }
+  }
+
+  @keyframes grassWind-very-far {
+    0% {
+      transform: translate(-50%, 20%) scale(1.25) skew(6deg);
+    }
+
+    50% {
+      transform: translate(-50%, 20%) scale(1.25) skew(-6deg);
+    }
+
+    100% {
+      transform: translate(-50%, 20%) scale(1.25) skew(6deg);
+    }
+  }
+
+  &__grass {
+    position: absolute;
+    transform-origin: 50% 100%;
+    width: 100%;
+    height: 100px;
+    left: 50%;
+    object-fit: cover;
+
+    &--close {
+      bottom: 0;
+      z-index: 4;
+      transform: translate(-50%, 20%) scale(2) skew(0deg);
+      filter: blur(.5px) brightness(1.15);
+      animation: grassWind-close 4s ease-in-out 0s infinite normal;
+    }
+
+    &--normal {
+      bottom: 11%;
+      z-index: 3;
+      transform: translate(-50%, 20%) scale(1.75);
+      filter: blur(.3px) brightness(1);
+      animation: grassWind-normal 4s ease-in-out 0s infinite normal;
+    }
+
+    &--far {
+      bottom: 21%;
+      z-index: 2;
+      transform: translate(-50%, 20%) scale(1.5);
+      filter: blur(.15px) brightness(.85);
+      animation: grassWind-far 4s ease-in-out 0s infinite normal;
+    }
+
+    &--very-far {
+      bottom: 30%;
+      z-index: 1;
+      transform: translate(-50%, 20%) scale(1.25);
+      filter: blur(0) brightness(.7);
+      animation: grassWind-very-far 4s ease-in-out 0s infinite normal;
+    }
   }
 }
 
@@ -19,15 +116,37 @@
   transform: translate(-50%, -50%);
 
   &__glow {
+    z-index: 5;
     position: absolute;
     transform: translate(-50%, -50%);
     top: 25%;
     left: 20%;
-    width: 850px;
-    height: 850px;
+    width: 700px;
+    height: 700px;
     border-radius: 50%;
-    filter: blur(350px);
-    z-index: -1;
-    background: rgb(255, 186, 57);
+    filter: blur(300px);
+    background: rgb(255, 217, 49);
   }
+}
+
+@keyframes birdsAnim {
+  0% {
+    top: 30%;
+    left: -14%;
+    transform: scaleX(-1) rotate(20deg);
+  }
+
+  100% {
+    transform: scaleX(-1) rotate(10deg);
+    top: 15%;
+    left: 100%;
+  }
+}
+
+.birds {
+  width: 15%;
+  z-index: 0;
+  position: absolute;
+  transform: scaleX(-1) rotate(10deg);
+  animation: birdsAnim 40s linear 0s infinite;
 }
