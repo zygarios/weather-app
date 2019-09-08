@@ -3,6 +3,7 @@
   max-width: 1200px;
   margin: 0 auto;
   height: 100vh;
+  overflow: hidden;
   position: relative;
   outline: 1px solid black;
 }
