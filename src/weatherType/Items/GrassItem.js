@@ -1,5 +1,5 @@
 import React from 'react';
-import grass from '../img/grass.png';
+import grass from '../../img/grass.png';
 
 function GrassItem() {
   return (

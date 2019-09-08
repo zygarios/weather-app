@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles/Landscape.css';
-import GrassItem from './weatherType/GrassItem';
-import birds from './img/birds.gif';
+import GrassItem from './weatherType/Items/GrassItem';
+import DryItem from './weatherType/Items/DryItem';
 
 import ClearSky from './weatherType/ClearSky.js';
 import FewClouds from './weatherType/FewClouds.js';
@@ -11,13 +11,11 @@ import Rain from './weatherType/Rain.js';
 import ShowerRain from './weatherType/ShowerRain.js';
 import Thunderstorm from './weatherType/Thunderstorm.js';
 import Snow from './weatherType/Snow.js';
-import Mist from './weatherType/Mist.js';
+import Nowhere from './weatherType/Nowhere.js';
 
-function Landscape(props) {
+function Landscape(weatherType) {
+  // const weatherType = 'nowhere';
   let showWeather;
-  const weatherType = 'clear sky';
-  //tymczasowa wartość stała bez fetchowania
-  // switch (props.weatherType) {
   switch (weatherType) {
     case 'clear sky':
       showWeather = <ClearSky></ClearSky>;
@@ -43,8 +41,8 @@ function Landscape(props) {
     case 'snow':
       showWeather = <Snow></Snow>;
       break;
-    case 'mist':
-      showWeather = <Mist></Mist>;
+    case 'nowhere':
+      showWeather = <Nowhere></Nowhere>;
       break;
     default: {
       showWeather = <ClearSky></ClearSky>;
@@ -53,8 +51,11 @@ function Landscape(props) {
   }
   return (
     <div className="landscape">
-      <GrassItem></GrassItem>
-      <img className="birds" src={birds} alt="birds" />
+      {weatherType !== 'nowhere' ? (
+        <GrassItem></GrassItem>
+      ) : (
+        <DryItem></DryItem>
+      )}
       {showWeather}
     </div>
   );
