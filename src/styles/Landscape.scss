@@ -1,13 +1,181 @@
+@keyframes tumbleweedAnim {
+  from {
+    transform: rotateZ(0deg);
+    left: -15%;
+  }
+
+  to {
+    transform: rotateZ(550deg);
+    left: 100%;
+  }
+}
+
+@keyframes tumbleweedAnim3dShadow {
+  from {
+    transform: rotateX(60deg) rotateZ(0deg);
+    left: -15%;
+  }
+
+  to {
+    transform: rotateX(60deg) rotateZ(600deg);
+    left: 100%;
+  }
+}
+
 .landscape {
   height: 100%;
 
+<<<<<<< HEAD
   &__grass {
+=======
+
+
+  &__grassland,
+  &__dry {
+>>>>>>> WeatherTypes-Look
     position: absolute;
     width: 100%;
     height: 40%;
     bottom: 0;
+<<<<<<< HEAD
     background: url("../img/grassland.png") no-repeat top;
     transform-origin: 50% 100%;
+=======
+    transform-origin: 50% 100%;
+  }
+
+  &__grassland {
+    background: url("../img/grassland.png") no-repeat top;
+  }
+
+  &__dry {
+    background: url("../img/dryland.png") no-repeat top;
+  }
+
+  &__tumbleweed {
+    position: absolute;
+    bottom: 25%;
+    left: -15%;
+    transform-origin: 50% 50%;
+    transform: rotateZ(0deg);
+
+    &--item {
+      animation: tumbleweedAnim 15s linear 0s;
+    }
+
+    &--shadow {
+      filter: blur(2px) brightness(.2);
+      animation: tumbleweedAnim 15s linear 0s;
+    }
+
+    &--shadow3d {
+      filter: blur(1px) brightness(.1);
+      transform-origin: 50% 50%;
+      bottom: 15%;
+      transform: rotateX(60deg) rotateZ(0deg);
+      animation: tumbleweedAnim3dShadow 15s linear 0s;
+    }
+
+
+  }
+
+
+  @keyframes grassWind-close {
+    0% {
+      transform: translate(-50%, 20%) scale(2) skew(-6deg);
+    }
+
+    50% {
+      transform: translate(-50%, 20%) scale(2) skew(6deg);
+    }
+
+    100% {
+      transform: translate(-50%, 20%) scale(2) skew(-6deg);
+    }
+  }
+
+  @keyframes grassWind-normal {
+    0% {
+      transform: translate(-50%, 20%) scale(1.75) skew(6deg);
+    }
+
+    50% {
+      transform: translate(-50%, 20%) scale(1.75) skew(-6deg);
+    }
+
+    100% {
+      transform: translate(-50%, 20%) scale(1.75) skew(6deg);
+    }
+  }
+
+  @keyframes grassWind-far {
+    0% {
+      transform: translate(-50%, 20%) scale(1.5) skew(-6deg);
+    }
+
+    50% {
+      transform: translate(-50%, 20%) scale(1.5) skew(6deg);
+    }
+
+    100% {
+      transform: translate(-50%, 20%) scale(1.5) skew(-6deg);
+    }
+  }
+
+  @keyframes grassWind-very-far {
+    0% {
+      transform: translate(-50%, 20%) scale(1.25) skew(6deg);
+    }
+
+    50% {
+      transform: translate(-50%, 20%) scale(1.25) skew(-6deg);
+    }
+
+    100% {
+      transform: translate(-50%, 20%) scale(1.25) skew(6deg);
+    }
+  }
+
+  &__grass {
+    position: absolute;
+    transform-origin: 50% 100%;
+    width: 100%;
+    height: 120px;
+    left: 50%;
+    object-fit: cover;
+
+    &--close {
+      bottom: 0;
+      z-index: 4;
+      transform: translate(-50%, 20%) scale(2) skew(0deg);
+      filter: blur(.5px) brightness(1.15);
+      animation: grassWind-close 4s ease-in-out 0s infinite normal;
+    }
+
+    &--normal {
+      bottom: 11%;
+      z-index: 3;
+      transform: translate(-50%, 20%) scale(1.75);
+      filter: blur(.3px) brightness(1);
+      animation: grassWind-normal 4s ease-in-out 0s infinite normal;
+    }
+
+    &--far {
+      bottom: 21%;
+      z-index: 2;
+      transform: translate(-50%, 20%) scale(1.5);
+      filter: blur(.15px) brightness(.85);
+      animation: grassWind-far 4s ease-in-out 0s infinite normal;
+    }
+
+    &--very-far {
+      bottom: 30%;
+      z-index: 1;
+      transform: translate(-50%, 20%) scale(1.25);
+      filter: blur(0) brightness(.7);
+      animation: grassWind-very-far 4s ease-in-out 0s infinite normal;
+    }
+>>>>>>> WeatherTypes-Look
   }
 }
 
@@ -19,15 +187,175 @@
   transform: translate(-50%, -50%);
 
   &__glow {
+<<<<<<< HEAD
+=======
+    z-index: 5;
+>>>>>>> WeatherTypes-Look
     position: absolute;
     transform: translate(-50%, -50%);
     top: 25%;
     left: 20%;
+<<<<<<< HEAD
     width: 850px;
     height: 850px;
     border-radius: 50%;
     filter: blur(350px);
     z-index: -1;
     background: rgb(255, 186, 57);
+=======
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    filter: blur(300px);
+    background: rgb(255, 234, 49);
+  }
+}
+
+@keyframes birdsAnim {
+  0% {
+    top: 30%;
+    left: -14%;
+    transform: scaleX(-1) rotate(20deg);
+  }
+
+  100% {
+    transform: scaleX(-1) rotate(10deg);
+    top: 15%;
+    left: 100%;
+  }
+}
+
+.birds {
+  width: 150px;
+  z-index: -1;
+  position: absolute;
+  transform: scaleX(-1) rotate(10deg);
+  animation: birdsAnim 40s linear 0s infinite;
+}
+
+@keyframes cloudAnimOne {
+  0% {
+    right: 60%;
+  }
+
+  100% {
+    right: 100%;
+  }
+}
+
+@keyframes cloudAnimTwo {
+  0% {
+    right: 50%;
+  }
+
+  100% {
+    right: 100%;
+  }
+}
+
+@keyframes cloudAnimThree {
+  0% {
+    right: 35%;
+  }
+
+  100% {
+    right: 100%;
+  }
+}
+
+@keyframes cloudAnimFour {
+  0% {
+    right: 10%;
+  }
+
+  100% {
+    right: 100%;
+  }
+}
+
+@keyframes cloudAnimFive {
+  0% {
+    right: 5%;
+  }
+
+  100% {
+    right: 100%;
+  }
+}
+
+.bright-cloud {
+  position: absolute;
+
+  &:nth-child(1) {
+    width: 300px;
+    top: 18%;
+    right: 60%;
+    animation: cloudAnimOne 40s linear 0s both;
+  }
+
+  &:nth-child(2) {
+    width: 150px;
+    top: 5%;
+    right: 50%;
+    transform: scaleX(-1);
+    animation: cloudAnimTwo 100s linear 0s both;
+  }
+
+  &:nth-child(3) {
+    width: 225px;
+    top: 25%;
+    right: 35%;
+    z-index: -2;
+    animation: cloudAnimThree 75s linear 0s both;
+  }
+
+  &:nth-child(4) {
+    width: 275px;
+    top: 15%;
+    right: 10%;
+    transform: scaleX(-1);
+    animation: cloudAnimFour 70s linear 0s both;
+  }
+
+  &:nth-child(5) {
+    width: 100px;
+    top: 33%;
+    right: 5%;
+    animation: cloudAnimFive 150s linear 0s both;
+  }
+
+}
+
+@keyframes nowhereMistAnim {
+  from {
+    left: -45%;
+  }
+
+  to {
+    left: 0;
+  }
+}
+
+.nowhere {
+  &__planet {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+
+    &--blur {
+      filter: blur(20px);
+    }
+  }
+
+  &__mist {
+    position: absolute;
+    bottom: 0;
+    left: -35%;
+    z-index: 6;
+    width: 150%;
+    height: 100%;
+    transform: scaleY(-1);
+    animation: nowhereMistAnim 25s linear 0s;
+>>>>>>> WeatherTypes-Look
   }
 }

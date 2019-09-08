@@ -1,7 +1,7 @@
 .termometer {
   width: 15px;
   height: 350px;
-  top: 50%;
+  top: 42%;
   right: 50px;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -10,7 +10,7 @@
   position: absolute;
   -webkit-box-shadow: inset 0 0 5px white;
           box-shadow: inset 0 0 5px white;
-  z-index: 1;
+  z-index: 2;
 }
 
 .termometer__fill {
@@ -22,6 +22,8 @@
   -webkit-box-shadow: inset 0 0 5px white;
           box-shadow: inset 0 0 5px white;
   border-radius: 5px;
+  -webkit-transition: height 2s ease, background 2s ease;
+  transition: height 2s ease, background 2s ease;
 }
 
 .termometer__tank {
@@ -37,6 +39,8 @@
   border-radius: 50%;
   background: red;
   z-index: -1;
+  -webkit-transition: background 2s ease;
+  transition: background 2s ease;
 }
 
 .termometer__tank--fill-red {
