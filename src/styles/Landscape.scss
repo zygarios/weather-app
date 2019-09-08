@@ -25,22 +25,14 @@
 .landscape {
   height: 100%;
 
-<<<<<<< HEAD
-  &__grass {
-=======
 
 
   &__grassland,
   &__dry {
->>>>>>> WeatherTypes-Look
     position: absolute;
     width: 100%;
     height: 40%;
     bottom: 0;
-<<<<<<< HEAD
-    background: url("../img/grassland.png") no-repeat top;
-    transform-origin: 50% 100%;
-=======
     transform-origin: 50% 100%;
   }
 
@@ -175,7 +167,6 @@
       filter: blur(0) brightness(.7);
       animation: grassWind-very-far 4s ease-in-out 0s infinite normal;
     }
->>>>>>> WeatherTypes-Look
   }
 }
 
@@ -187,22 +178,11 @@
   transform: translate(-50%, -50%);
 
   &__glow {
-<<<<<<< HEAD
-=======
     z-index: 5;
->>>>>>> WeatherTypes-Look
     position: absolute;
     transform: translate(-50%, -50%);
     top: 25%;
     left: 20%;
-<<<<<<< HEAD
-    width: 850px;
-    height: 850px;
-    border-radius: 50%;
-    filter: blur(350px);
-    z-index: -1;
-    background: rgb(255, 186, 57);
-=======
     width: 700px;
     height: 700px;
     border-radius: 50%;
@@ -356,6 +336,5 @@
     height: 100%;
     transform: scaleY(-1);
     animation: nowhereMistAnim 25s linear 0s;
->>>>>>> WeatherTypes-Look
   }
 }

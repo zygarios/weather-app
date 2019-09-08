@@ -13,8 +13,9 @@ import Thunderstorm from './weatherType/Thunderstorm.js';
 import Snow from './weatherType/Snow.js';
 import Nowhere from './weatherType/Nowhere.js';
 
-function Landscape(weatherType) {
+function Landscape({ weatherType }) {
   // const weatherType = 'nowhere';
+  console.log(weatherType);
   let showWeather;
   switch (weatherType) {
     case 'clear sky':
@@ -42,6 +43,7 @@ function Landscape(weatherType) {
       showWeather = <Snow></Snow>;
       break;
     case 'nowhere':
+      console.log(weatherType);
       showWeather = <Nowhere></Nowhere>;
       break;
     default: {
