@@ -1,5 +1,59 @@
 .weather-form {
   position: absolute;
   z-index: 6;
+  bottom: 52.5%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+  width: 100%;
+  text-align: center;
+}
+
+.weather-form__label {
+  font-size: 1.5em;
+  color: white;
+  text-shadow: 1px 1px 5px black;
+}
+
+.weather-form__input {
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 1.25rem;
+  display: block;
+  max-width: 300px;
+  width: 70%;
+  border: none;
+  -webkit-box-shadow: inset 1.25px 1.5px 6px 0px black;
+          box-shadow: inset 1.25px 1.5px 6px 0px black;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.weather-form__button {
+  cursor: pointer;
+  background: #9c9c9c;
+  color: white;
+  text-shadow: .5px .5px 1px black;
+  padding: 17.5px;
+  border-radius: 50%;
+  font-weight: bold;
+  border: none;
+  -webkit-box-shadow: inset 2px 2px 3px white, inset 7.5px 7.5px 8.5px darkgrey, 0 3px 2px 0 #5f5f5f;
+          box-shadow: inset 2px 2px 3px white, inset 7.5px 7.5px 8.5px darkgrey, 0 3px 2px 0 #5f5f5f;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+.weather-form__button:hover {
+  -webkit-box-shadow: inset 2px 2px 6px white, inset 7.5px 7.5px 10px #bebebe, 0 3px 2px 0 #5f5f5f;
+          box-shadow: inset 2px 2px 6px white, inset 7.5px 7.5px 10px #bebebe, 0 3px 2px 0 #5f5f5f;
+}
+
+.weather-form__button:active {
+  -webkit-box-shadow: inset 2px 2px 3px #575757, inset 7.5px 7.5px 8.5px #959595, 0 0px 2px 0 #5f5f5f;
+          box-shadow: inset 2px 2px 3px #575757, inset 7.5px 7.5px 8.5px #959595, 0 0px 2px 0 #5f5f5f;
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
+  text-shadow: .5px 1px 1px black;
 }
 /*# sourceMappingURL=Form.css.map */

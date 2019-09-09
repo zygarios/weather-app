@@ -12,8 +12,13 @@ function Form({ getWeather }) {
   };
 
   return (
-    <form className="weather-form" onSubmit={handleSubmitForm}>
-      <label htmlFor="city">
+    <form
+      className="weather-form"
+      onSubmit={handleSubmitForm}
+      autoComplete="off"
+    >
+      <label htmlFor="city" className="weather-form__label">
+        Check current weather
         <input
           type="text"
           name="city"
@@ -21,10 +26,10 @@ function Form({ getWeather }) {
           placeholder="Search a city"
           value={inputValue}
           onChange={e => setInputValue(e.target.value)}
+          className="weather-form__input"
         />
-        Check current weather
       </label>
-      <input type="submit" value="Search"></input>
+      <input type="submit" value="GO!" className="weather-form__button"></input>
     </form>
   );
 }

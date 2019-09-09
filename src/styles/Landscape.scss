@@ -5,7 +5,7 @@
   }
 
   to {
-    transform: rotateZ(550deg);
+    transform: rotateZ(700deg);
     left: 100%;
   }
 }
@@ -17,7 +17,7 @@
   }
 
   to {
-    transform: rotateX(60deg) rotateZ(600deg);
+    transform: rotateX(60deg) rotateZ(700deg);
     left: 100%;
   }
 }
@@ -52,12 +52,12 @@
     transform: rotateZ(0deg);
 
     &--item {
-      animation: tumbleweedAnim 15s linear 0s;
+      animation: tumbleweedAnim 15s linear 0s infinite;
     }
 
     &--shadow {
       filter: blur(2px) brightness(.2);
-      animation: tumbleweedAnim 15s linear 0s;
+      animation: tumbleweedAnim 15s linear 0s infinite;
     }
 
     &--shadow3d {
@@ -65,7 +65,7 @@
       transform-origin: 50% 50%;
       bottom: 15%;
       transform: rotateX(60deg) rotateZ(0deg);
-      animation: tumbleweedAnim3dShadow 15s linear 0s;
+      animation: tumbleweedAnim3dShadow 15s linear 0s infinite;
     }
 
 
@@ -131,8 +131,8 @@
   &__grass {
     position: absolute;
     transform-origin: 50% 100%;
+    min-height: 14vh;
     width: 100%;
-    height: 120px;
     left: 50%;
     object-fit: cover;
 
@@ -333,8 +333,8 @@
     left: -35%;
     z-index: 6;
     width: 150%;
-    height: 100%;
+    height: 120%;
     transform: scaleY(-1);
-    animation: nowhereMistAnim 25s linear 0s;
+    animation: nowhereMistAnim 30s linear 0s;
   }
 }

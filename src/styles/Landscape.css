@@ -5,8 +5,8 @@
     left: -15%;
   }
   to {
-    -webkit-transform: rotateZ(550deg);
-            transform: rotateZ(550deg);
+    -webkit-transform: rotateZ(700deg);
+            transform: rotateZ(700deg);
     left: 100%;
   }
 }
@@ -18,8 +18,8 @@
     left: -15%;
   }
   to {
-    -webkit-transform: rotateZ(550deg);
-            transform: rotateZ(550deg);
+    -webkit-transform: rotateZ(700deg);
+            transform: rotateZ(700deg);
     left: 100%;
   }
 }
@@ -31,8 +31,8 @@
     left: -15%;
   }
   to {
-    -webkit-transform: rotateX(60deg) rotateZ(600deg);
-            transform: rotateX(60deg) rotateZ(600deg);
+    -webkit-transform: rotateX(60deg) rotateZ(700deg);
+            transform: rotateX(60deg) rotateZ(700deg);
     left: 100%;
   }
 }
@@ -44,8 +44,8 @@
     left: -15%;
   }
   to {
-    -webkit-transform: rotateX(60deg) rotateZ(600deg);
-            transform: rotateX(60deg) rotateZ(600deg);
+    -webkit-transform: rotateX(60deg) rotateZ(700deg);
+            transform: rotateX(60deg) rotateZ(700deg);
     left: 100%;
   }
 }
@@ -82,15 +82,15 @@
 }
 
 .landscape__tumbleweed--item {
-  -webkit-animation: tumbleweedAnim 15s linear 0s;
-          animation: tumbleweedAnim 15s linear 0s;
+  -webkit-animation: tumbleweedAnim 15s linear 0s infinite;
+          animation: tumbleweedAnim 15s linear 0s infinite;
 }
 
 .landscape__tumbleweed--shadow {
   -webkit-filter: blur(2px) brightness(0.2);
           filter: blur(2px) brightness(0.2);
-  -webkit-animation: tumbleweedAnim 15s linear 0s;
-          animation: tumbleweedAnim 15s linear 0s;
+  -webkit-animation: tumbleweedAnim 15s linear 0s infinite;
+          animation: tumbleweedAnim 15s linear 0s infinite;
 }
 
 .landscape__tumbleweed--shadow3d {
@@ -101,8 +101,8 @@
   bottom: 15%;
   -webkit-transform: rotateX(60deg) rotateZ(0deg);
           transform: rotateX(60deg) rotateZ(0deg);
-  -webkit-animation: tumbleweedAnim3dShadow 15s linear 0s;
-          animation: tumbleweedAnim3dShadow 15s linear 0s;
+  -webkit-animation: tumbleweedAnim3dShadow 15s linear 0s infinite;
+          animation: tumbleweedAnim3dShadow 15s linear 0s infinite;
 }
 
 @-webkit-keyframes grassWind-close {
@@ -229,8 +229,8 @@
   position: absolute;
   -webkit-transform-origin: 50% 100%;
           transform-origin: 50% 100%;
+  min-height: 14vh;
   width: 100%;
-  height: 120px;
   left: 50%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -518,10 +518,10 @@
   left: -35%;
   z-index: 6;
   width: 150%;
-  height: 100%;
+  height: 120%;
   -webkit-transform: scaleY(-1);
           transform: scaleY(-1);
-  -webkit-animation: nowhereMistAnim 25s linear 0s;
-          animation: nowhereMistAnim 25s linear 0s;
+  -webkit-animation: nowhereMistAnim 30s linear 0s;
+          animation: nowhereMistAnim 30s linear 0s;
 }
 /*# sourceMappingURL=Landscape.css.map */
