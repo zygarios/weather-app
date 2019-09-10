@@ -54,6 +54,13 @@
   height: 100%;
 }
 
+.landscape__stars {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .landscape__grassland, .landscape__dry {
   position: absolute;
   width: 100%;
@@ -302,6 +309,22 @@
   -webkit-filter: blur(300px);
           filter: blur(300px);
   background: #ffea31;
+}
+
+.moon {
+  position: absolute;
+  width: 150px;
+  top: 20%;
+  left: 20%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-filter: brightness(1.5);
+          filter: brightness(1.5);
+}
+
+.moon--glow {
+  -webkit-filter: blur(3px) brightness(2);
+          filter: blur(3px) brightness(2);
 }
 
 @-webkit-keyframes birdsAnim {

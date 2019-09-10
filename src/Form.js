@@ -7,8 +7,9 @@ function Form({ getWeather }) {
   const handleSubmitForm = e => {
     e.preventDefault();
     const cityName = inputValue;
-    setInputValue('');
+    if (cityName === '') return;
     getWeather(cityName);
+    setInputValue('');
   };
 
   return (
@@ -17,18 +18,17 @@ function Form({ getWeather }) {
       onSubmit={handleSubmitForm}
       autoComplete="off"
     >
-      <label htmlFor="city" className="weather-form__label">
+      <h1 className="weather-form__text">
         Check current weather
         <input
           type="text"
           name="city"
-          id="city"
           placeholder="Search a city"
           value={inputValue}
           onChange={e => setInputValue(e.target.value)}
           className="weather-form__input"
         />
-      </label>
+      </h1>
       <input type="submit" value="GO!" className="weather-form__button"></input>
     </form>
   );

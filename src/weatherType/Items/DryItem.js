@@ -6,10 +6,6 @@ function DryItem() {
   useEffect(() => {
     document.body.style =
       'background: linear-gradient(rgb(0, 0, 0), rgb(56, 56, 56));';
-    return () => {
-      document.body.style =
-        'background: linear-gradient(rgb(0, 68, 255), rgb(0, 195, 255));';
-    };
   });
   return (
     <>

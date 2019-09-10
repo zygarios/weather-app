@@ -1,13 +1,13 @@
 .weather-form {
   position: absolute;
-  z-index: 6;
+  z-index: 10;
   bottom: 52.5%;
   left: 50%;
   transform: translate(-50%, 50%);
   width: 100%;
   text-align: center;
 
-  &__label {
+  &__text {
     font-size: 1.5em;
     color: white;
     text-shadow: 1px 1px 5px black;

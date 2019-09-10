@@ -1,6 +1,6 @@
 .weather-form {
   position: absolute;
-  z-index: 6;
+  z-index: 10;
   bottom: 52.5%;
   left: 50%;
   -webkit-transform: translate(-50%, 50%);
@@ -9,7 +9,7 @@
   text-align: center;
 }
 
-.weather-form__label {
+.weather-form__text {
   font-size: 1.5em;
   color: white;
   text-shadow: 1px 1px 5px black;

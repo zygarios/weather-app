@@ -1,6 +1,6 @@
 import React from 'react';
 
-import SunItem from './SunItem';
+import SunItem from './Items/SunItem';
 
 function ScatteredClouds() {
   return (
