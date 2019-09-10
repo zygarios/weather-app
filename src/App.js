@@ -20,6 +20,7 @@ function App() {
         `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&APPID=${APIKey}`
       )
       .then(({ data }) => {
+        console.log(data);
         const typeID = data.weather[0].icon;
 
         const weatherID = typeID.slice(0, 2);
@@ -45,9 +46,10 @@ function App() {
   const { weatherID, timeID, temp } = cityWeather;
   return (
     <div className="App">
-      <Termometer temp={temp} />
+      {weatherID !== null && <Termometer temp={temp} />}
       <Form getWeather={getWeather} />
-      <Landscape weatherID={weatherID} timeID={timeID} />
+      <Landscape weatherID={weatherID} timeID={'d'} />
+      {/* testy */}
     </div>
   );
 }

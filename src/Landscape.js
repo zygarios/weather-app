@@ -22,7 +22,7 @@ function Landscape({ weatherID, timeID }) {
   let layout;
   switch (weatherID) {
     case '01':
-      showWeather = <ClearSky timeID={timeID}></ClearSky>;
+      showWeather = <ClearSky></ClearSky>;
       break;
     case '02':
       showWeather = <FewClouds timeID={timeID}></FewClouds>;
@@ -49,6 +49,7 @@ function Landscape({ weatherID, timeID }) {
       showWeather = <Nowhere></Nowhere>;
       break;
     default: {
+      showWeather = <ScatteredClouds timeID={timeID}></ScatteredClouds>;
       break;
     }
   }
@@ -58,6 +59,7 @@ function Landscape({ weatherID, timeID }) {
   } else if (weatherID === null) {
     // layout = <WelcomeScreen></WelcomeScreen>;
     layout = <GrassItem timeID={timeID}></GrassItem>;
+    // testy
   } else {
     layout = <GrassItem timeID={timeID}></GrassItem>;
   }

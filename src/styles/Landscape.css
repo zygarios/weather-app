@@ -50,8 +50,282 @@
   }
 }
 
+.sun-item {
+  position: absolute;
+  width: 500px;
+  top: 35%;
+  left: 20%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.sun-item__glow {
+  z-index: 5;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 25%;
+  left: 20%;
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  -webkit-filter: blur(300px);
+          filter: blur(300px);
+  background: #ffea31;
+}
+
+.moon {
+  position: absolute;
+  width: 150px;
+  top: 20%;
+  left: 20%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: -2;
+  -webkit-filter: brightness(1.25);
+          filter: brightness(1.25);
+}
+
+.moon--glow {
+  -webkit-filter: blur(50px) brightness(2);
+          filter: blur(50px) brightness(2);
+  opacity: .5;
+  z-index: 5;
+}
+
+.birds {
+  width: 150px;
+  z-index: -1;
+  position: absolute;
+  -webkit-transform: scaleX(-1) rotate(10deg);
+          transform: scaleX(-1) rotate(10deg);
+  -webkit-animation: birdsAnim 40s linear 0s infinite;
+          animation: birdsAnim 40s linear 0s infinite;
+}
+
+@-webkit-keyframes birdsAnim {
+  0% {
+    top: 30%;
+    left: -14%;
+    -webkit-transform: scaleX(-1) rotate(20deg);
+            transform: scaleX(-1) rotate(20deg);
+  }
+  100% {
+    -webkit-transform: scaleX(-1) rotate(10deg);
+            transform: scaleX(-1) rotate(10deg);
+    top: 15%;
+    left: 100%;
+  }
+}
+
+@keyframes birdsAnim {
+  0% {
+    top: 30%;
+    left: -14%;
+    -webkit-transform: scaleX(-1) rotate(20deg);
+            transform: scaleX(-1) rotate(20deg);
+  }
+  100% {
+    -webkit-transform: scaleX(-1) rotate(10deg);
+            transform: scaleX(-1) rotate(10deg);
+    top: 15%;
+    left: 100%;
+  }
+}
+
+@-webkit-keyframes welcomeCloudMoveFront {
+  from {
+    left: 0%;
+  }
+  to {
+    left: 900%;
+  }
+}
+
+@keyframes welcomeCloudMoveFront {
+  from {
+    left: 0%;
+  }
+  to {
+    left: 900%;
+  }
+}
+
+@-webkit-keyframes welcomeCloudMoveMiddle {
+  from {
+    left: 30%;
+  }
+  to {
+    left: 600%;
+  }
+}
+
+@keyframes welcomeCloudMoveMiddle {
+  from {
+    left: 30%;
+  }
+  to {
+    left: 600%;
+  }
+}
+
+@-webkit-keyframes welcomeCloudMoveBack {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 300%;
+  }
+}
+
+@keyframes welcomeCloudMoveBack {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 300%;
+  }
+}
+
+@-webkit-keyframes sunMove {
+  from {
+    left: 70%;
+    top: 30%;
+  }
+  to {
+    left: -30%;
+    top: 55%;
+  }
+}
+
+@keyframes sunMove {
+  from {
+    left: 70%;
+    top: 30%;
+  }
+  to {
+    left: -30%;
+    top: 55%;
+  }
+}
+
+.birds {
+  width: 150px;
+  z-index: -1;
+  position: absolute;
+  -webkit-transform: scaleX(-1) rotate(10deg);
+          transform: scaleX(-1) rotate(10deg);
+  -webkit-animation: birdsAnim 40s linear 0s infinite;
+          animation: birdsAnim 40s linear 0s infinite;
+}
+
+@keyframes birdsAnim {
+  0% {
+    top: 30%;
+    left: -14%;
+    -webkit-transform: scaleX(-1) rotate(20deg);
+            transform: scaleX(-1) rotate(20deg);
+  }
+  100% {
+    -webkit-transform: scaleX(-1) rotate(10deg);
+            transform: scaleX(-1) rotate(10deg);
+    top: 15%;
+    left: 100%;
+  }
+}
+
+@-webkit-keyframes birdsAnimWelcome {
+  0% {
+    top: -20%;
+    left: -75%;
+  }
+  100% {
+    top: 35%;
+    left: 100%;
+  }
+}
+
+@keyframes birdsAnimWelcome {
+  0% {
+    top: -20%;
+    left: -75%;
+  }
+  100% {
+    top: 35%;
+    left: 100%;
+  }
+}
+
+.welcome .sun-item {
+  left: 70%;
+  top: 35%;
+  -webkit-animation: sunMove 250s linear 0s 1;
+          animation: sunMove 250s linear 0s 1;
+  z-index: 6;
+}
+
+.welcome .sun-item__sun {
+  opacity: .9;
+}
+
+.welcome .sun-item__glow {
+  top: 25%;
+  left: 60%;
+  -webkit-filter: blur(350px);
+          filter: blur(350px);
+  background: #f0aa29;
+  opacity: .8;
+}
+
+.welcome__birds {
+  width: 400px;
+  z-index: 3;
+  position: absolute;
+  -webkit-transform: scale(1) rotate(15deg);
+          transform: scale(1) rotate(15deg);
+  animation: birdsAnimWelcome 35s linear 0s infinite reverse;
+}
+
+.welcome__welcome-cloud {
+  position: absolute;
+  top: 60%;
+  text-align: center;
+  width: 100%;
+}
+
+.welcome__welcome-cloud--front {
+  -webkit-transform: translate(-50%, -50%) scaleX(1.25) scaleY(1) skew(10deg);
+          transform: translate(-50%, -50%) scaleX(1.25) scaleY(1) skew(10deg);
+  opacity: .8;
+  left: 30%;
+  -webkit-animation: welcomeCloudMoveFront 360s linear 0s;
+          animation: welcomeCloudMoveFront 360s linear 0s;
+  z-index: 4;
+}
+
+.welcome__welcome-cloud--middle {
+  -webkit-transform: translate(-50%, -50%) scaleX(1.75) scaleY(1.5) skewx(10deg);
+          transform: translate(-50%, -50%) scaleX(1.75) scaleY(1.5) skewx(10deg);
+  opacity: .7;
+  left: 40%;
+  -webkit-animation: welcomeCloudMoveMiddle 360s linear 0s 1;
+          animation: welcomeCloudMoveMiddle 360s linear 0s 1;
+  z-index: 3;
+}
+
+.welcome__welcome-cloud--back {
+  -webkit-transform: translate(-50%, -50%) scaleX(2.5) scaleY(2);
+          transform: translate(-50%, -50%) scaleX(2.5) scaleY(2);
+  opacity: .6;
+  left: 50%;
+  -webkit-animation: welcomeCloudMoveBack 360s linear 0s 1;
+          animation: welcomeCloudMoveBack 360s linear 0s 1;
+  z-index: 2;
+}
+
 .landscape {
   height: 100%;
+  width: 100%;
 }
 
 .landscape__stars {
@@ -287,86 +561,6 @@
           animation: grassWind-very-far 4s ease-in-out 0s infinite normal;
 }
 
-.sun {
-  position: absolute;
-  width: 500px;
-  top: 35%;
-  left: 20%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-.sun__glow {
-  z-index: 5;
-  position: absolute;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  top: 25%;
-  left: 20%;
-  width: 700px;
-  height: 700px;
-  border-radius: 50%;
-  -webkit-filter: blur(300px);
-          filter: blur(300px);
-  background: #ffea31;
-}
-
-.moon {
-  position: absolute;
-  width: 150px;
-  top: 20%;
-  left: 20%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  -webkit-filter: brightness(1.5);
-          filter: brightness(1.5);
-}
-
-.moon--glow {
-  -webkit-filter: blur(3px) brightness(2);
-          filter: blur(3px) brightness(2);
-}
-
-@-webkit-keyframes birdsAnim {
-  0% {
-    top: 30%;
-    left: -14%;
-    -webkit-transform: scaleX(-1) rotate(20deg);
-            transform: scaleX(-1) rotate(20deg);
-  }
-  100% {
-    -webkit-transform: scaleX(-1) rotate(10deg);
-            transform: scaleX(-1) rotate(10deg);
-    top: 15%;
-    left: 100%;
-  }
-}
-
-@keyframes birdsAnim {
-  0% {
-    top: 30%;
-    left: -14%;
-    -webkit-transform: scaleX(-1) rotate(20deg);
-            transform: scaleX(-1) rotate(20deg);
-  }
-  100% {
-    -webkit-transform: scaleX(-1) rotate(10deg);
-            transform: scaleX(-1) rotate(10deg);
-    top: 15%;
-    left: 100%;
-  }
-}
-
-.birds {
-  width: 150px;
-  z-index: -1;
-  position: absolute;
-  -webkit-transform: scaleX(-1) rotate(10deg);
-          transform: scaleX(-1) rotate(10deg);
-  -webkit-animation: birdsAnim 40s linear 0s infinite;
-          animation: birdsAnim 40s linear 0s infinite;
-}
-
 @-webkit-keyframes cloudAnimOne {
   0% {
     right: 60%;
@@ -506,6 +700,27 @@
           animation: cloudAnimFive 150s linear 0s both;
 }
 
+.landscape__scattered-clouds {
+  height: 100%;
+}
+
+.landscape__scattered-clouds .bright-clouds {
+  height: 100%;
+}
+
+.landscape__scattered-clouds .bright-clouds:nth-of-type(1) {
+  -webkit-transform: translateY(20%) translateX(50%) scaleX(2) scaleY(2);
+          transform: translateY(20%) translateX(50%) scaleX(2) scaleY(2);
+}
+
+.landscape__scattered-clouds .bright-clouds:nth-of-type(1) .bright-cloud {
+  z-index: 10;
+}
+
+.landscape__scattered-clouds .bright-clouds:nth-of-type(2) .bright-cloud {
+  z-index: -5;
+}
+
 @-webkit-keyframes nowhereMistAnim {
   from {
     left: -45%;
@@ -546,5 +761,43 @@
           transform: scaleY(-1);
   -webkit-animation: nowhereMistAnim 30s linear 0s;
           animation: nowhereMistAnim 30s linear 0s;
+}
+
+.dark-grass-2 {
+  -webkit-filter: brightness(0.45) blur(0px);
+          filter: brightness(0.45) blur(0px);
+}
+
+.dark-grass-3 {
+  -webkit-filter: brightness(0.35) blur(0.25px);
+          filter: brightness(0.35) blur(0.25px);
+}
+
+.dark-grass-4 {
+  -webkit-filter: brightness(0.25) blur(0.5px);
+          filter: brightness(0.25) blur(0.5px);
+}
+
+.dark-grass-5 {
+  -webkit-filter: brightness(0.15) blur(0.75px);
+          filter: brightness(0.15) blur(0.75px);
+}
+
+.dark-grass-1 {
+  -webkit-filter: brightness(0.05) blur(1px);
+          filter: brightness(0.05) blur(1px);
+}
+
+.darkitem {
+  -webkit-filter: brightness(0.3);
+          filter: brightness(0.3);
+}
+
+.filter {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 100vh;
 }
 /*# sourceMappingURL=Landscape.css.map */

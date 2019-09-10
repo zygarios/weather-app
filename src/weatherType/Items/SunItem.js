@@ -4,10 +4,10 @@ import sun from '../../img/sun.png';
 
 function SunItem() {
   return (
-    <>
-      <img className="sun" src={sun} alt="sun" />
-      <div className="sun__glow"></div>
-    </>
+    <div className="sun-item">
+      <img className="sun-item__sun" src={sun} alt="sun" />
+      <div className="sun-item__glow"></div>
+    </div>
   );
 }
 

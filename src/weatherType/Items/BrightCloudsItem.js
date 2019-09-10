@@ -1,14 +1,37 @@
 import React from 'react';
 import brightCloud from '../../img/bright-cloud.png';
 
-function BrightCloudsItem() {
+function BrightCloudsItem({ timeID }) {
+  let dayTime;
+  if (timeID === 'n') dayTime = 'darkitem';
+  else dayTime = 'bright-item';
   return (
-    <div>
-      <img className="bright-cloud" src={brightCloud} alt="birds" />
-      <img className="bright-cloud" src={brightCloud} alt="birds" />
-      <img className="bright-cloud" src={brightCloud} alt="birds" />
-      <img className="bright-cloud" src={brightCloud} alt="birds" />
-      <img className="bright-cloud" src={brightCloud} alt="birds" />
+    <div className="bright-clouds">
+      <img
+        className={`bright-cloud ${dayTime}`}
+        src={brightCloud}
+        alt="birds"
+      />
+      <img
+        className={`bright-cloud ${dayTime}`}
+        src={brightCloud}
+        alt="birds"
+      />
+      <img
+        className={`bright-cloud ${dayTime}`}
+        src={brightCloud}
+        alt="birds"
+      />
+      <img
+        className={`bright-cloud ${dayTime}`}
+        src={brightCloud}
+        alt="birds"
+      />
+      <img
+        className={`bright-cloud ${dayTime}`}
+        src={brightCloud}
+        alt="birds"
+      />
     </div>
   );
 }

@@ -14,33 +14,49 @@ function GrassItem({ timeID }) {
     }
   });
 
+  let darkClass = null;
+  if (timeID === 'n') {
+    darkClass = 'dark-grass';
+  }
   return (
     <>
-      {timeID === 'd' ? <SunItem></SunItem> : <MoonItem></MoonItem>}
-      {timeID === 'n' && (
-        <img src={stars} alt="stars" className="landscape__stars" />
+      {timeID === 'd' || timeID === null ? (
+        <SunItem></SunItem>
+      ) : (
+        <MoonItem></MoonItem>
       )}
-      <div className="landscape__grassland" />
-      <img
-        className="landscape__grass landscape__grass--close "
-        src={grass}
-        alt="grass"
-      />
-      <img
-        className="landscape__grass landscape__grass--normal"
-        src={grass}
-        alt="grass"
-      />
-      <img
-        className="landscape__grass landscape__grass--far"
-        src={grass}
-        alt="grass"
-      />
-      <img
-        className="landscape__grass landscape__grass--very-far"
-        src={grass}
-        alt="grass"
-      />
+      {timeID === 'n' && (
+        <>
+          <img src={stars} alt="stars" className="landscape__stars" />
+        </>
+      )}
+      <div className="grass">
+        <div className={`landscape__grassland ${darkClass + '-1'}`} />
+        <img
+          className={`landscape__grass landscape__grass--close ${darkClass +
+            '-2'}`}
+          src={grass}
+          alt="grass"
+        />
+        <img
+          className={`landscape__grass landscape__grass--normal ${darkClass +
+            '-3'}`}
+          src={grass}
+          alt="grass"
+        />
+        <img
+          className={`landscape__grass landscape__grass--far ${darkClass +
+            '-4'}`}
+          src={grass}
+          alt="grass"
+        />
+        <img
+          className={`landscape__grass landscape__grass--very-far ${darkClass +
+            '-5'}`}
+          src={grass}
+          alt="grass"
+        />
+      </div>
     </>
   );
 }
