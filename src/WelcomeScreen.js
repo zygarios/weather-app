@@ -1,7 +1,7 @@
 import React from 'react';
-import brightCloud from './../img/bright-cloud.png';
-import SunItem from './Items/SunItem.js';
-import birds from '../img/birds.gif';
+import brightCloud from './img/bright-cloud.png';
+import SunItem from './weatherType/Items/SunItem.js';
+import birds from './img/birds.gif';
 
 function WelcomeScreen() {
   return (

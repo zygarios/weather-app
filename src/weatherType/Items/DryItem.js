@@ -1,12 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import tumbleweed from '../../img/tumbleweed.png';
 
 function DryItem() {
-  useEffect(() => {
-    document.body.style =
-      'background: linear-gradient(rgb(0, 0, 0), rgb(56, 56, 56));';
-  });
   return (
     <>
       <div className="landscape__dry" alt="dryland">

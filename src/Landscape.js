@@ -1,75 +1,91 @@
 import React from 'react';
 import './styles/Landscape.css';
-import GrassItem from './weatherType/Items/GrassItem';
-import DryItem from './weatherType/Items/DryItem';
 
-import WelcomeScreen from './weatherType/WelcomeScreen.js';
 import ClearSky from './weatherType/ClearSky.js';
 import FewClouds from './weatherType/FewClouds.js';
 import ScatteredClouds from './weatherType/ScatteredClouds.js';
 import BrokenClouds from './weatherType/BrokenClouds.js';
 import Rain from './weatherType/Rain.js';
-import ShowerRain from './weatherType/ShowerRain.js';
+import HeavyRain from './weatherType/HeavyRain.js';
 import Thunderstorm from './weatherType/Thunderstorm.js';
 import Snow from './weatherType/Snow.js';
 import Nowhere from './weatherType/Nowhere.js';
 
 function Landscape({ weatherID, timeID }) {
-  // function Landscape() {
-  // const weatherType = 'few clouds';
+  let darkitem = null;
+  if (timeID === 'n') {
+    darkitem = 'darkitem';
+  }
 
   let showWeather;
-  let layout;
+
   switch (weatherID) {
     case '01':
-      showWeather = <ClearSky></ClearSky>;
+      showWeather = <ClearSky timeID={timeID} weatherID={weatherID}></ClearSky>;
       break;
     case '02':
-      showWeather = <FewClouds timeID={timeID}></FewClouds>;
+      showWeather = (
+        <FewClouds
+          timeID={timeID}
+          darkitem={darkitem}
+          weatherID={weatherID}
+        ></FewClouds>
+      );
       break;
     case '03':
-      showWeather = <ScatteredClouds timeID={timeID}></ScatteredClouds>;
+      showWeather = (
+        <ScatteredClouds
+          timeID={timeID}
+          darkitem={darkitem}
+          weatherID={weatherID}
+        ></ScatteredClouds>
+      );
       break;
     case '04':
-      showWeather = <BrokenClouds timeID={timeID}></BrokenClouds>;
+      showWeather = (
+        <BrokenClouds
+          timeID={timeID}
+          darkitem={darkitem}
+          weatherID={weatherID}
+        ></BrokenClouds>
+      );
       break;
     case '10':
-      showWeather = <Rain timeID={timeID}></Rain>;
+      showWeather = (
+        <Rain timeID={timeID} darkitem={darkitem} weatherID={weatherID}></Rain>
+      );
       break;
     case '09':
-      showWeather = <ShowerRain timeID={timeID}></ShowerRain>;
+      showWeather = (
+        <HeavyRain
+          timeID={timeID}
+          darkitem={darkitem}
+          weatherID={weatherID}
+        ></HeavyRain>
+      );
       break;
     case '11':
-      showWeather = <Thunderstorm timeID={timeID}></Thunderstorm>;
+      showWeather = (
+        <Thunderstorm
+          timeID={timeID}
+          darkitem={darkitem}
+          weatherID={weatherID}
+        ></Thunderstorm>
+      );
       break;
     case '13':
-      showWeather = <Snow timeID={timeID}></Snow>;
+      showWeather = <Snow timeID={timeID} darkitem={darkitem}></Snow>;
       break;
     case 'nowhere':
       showWeather = <Nowhere></Nowhere>;
       break;
+
     default: {
-      showWeather = <ScatteredClouds timeID={timeID}></ScatteredClouds>;
       break;
     }
   }
 
-  if (weatherID === 'nowhere') {
-    layout = <DryItem></DryItem>;
-  } else if (weatherID === null) {
-    // layout = <WelcomeScreen></WelcomeScreen>;
-    layout = <GrassItem timeID={timeID}></GrassItem>;
-    // testy
-  } else {
-    layout = <GrassItem timeID={timeID}></GrassItem>;
-  }
-
-  return (
-    <div className="landscape">
-      {layout}
-      {showWeather}
-    </div>
-  );
+  return <div className="landscape">{showWeather}</div>;
 }
 
 export default Landscape;

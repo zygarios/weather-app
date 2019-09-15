@@ -1,7 +1,12 @@
 import React from 'react';
+import GrassItem from '../weatherType/Items/GrassItem';
 
-function Snow() {
-  return <div className="landscape__snow">Snow</div>;
+function Snow({ weatherID, timeID }) {
+  return (
+    <div className="snow">
+      <GrassItem weatherID={weatherID} timeID={timeID}></GrassItem>
+    </div>
+  );
 }
 
 export default Snow;

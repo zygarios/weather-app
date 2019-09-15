@@ -1,15 +1,16 @@
 import React from 'react';
 import birds from '../img/birds.gif';
-import BrightCloudsItem from '../weatherType/Items/BrightCloudsItem';
-import Filter from '../Filter.js';
+import BrightCloudsItem from './Items/BrightCloudsItem';
+import GrassItem from '../weatherType/Items/GrassItem';
 
-function ScatteredClouds({ timeID }) {
+function ScatteredClouds({ weatherID, darkitem, timeID }) {
   return (
-    <div className="landscape__scattered-clouds">
-      <Filter darkness="1"></Filter>
+    <div className="scattered-clouds">
       <img className="birds" src={birds} alt="birds" />
-      <BrightCloudsItem timeID={timeID}></BrightCloudsItem>
-      <BrightCloudsItem timeID={timeID}></BrightCloudsItem>
+      <BrightCloudsItem id="one" darkitem={darkitem}></BrightCloudsItem>
+      <BrightCloudsItem id="two" darkitem={darkitem}></BrightCloudsItem>
+      <img className="birds" src={birds} alt="birds" />
+      <GrassItem weatherID={weatherID} timeID={timeID}></GrassItem>
     </div>
   );
 }

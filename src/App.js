@@ -2,17 +2,25 @@ import React, { useState } from 'react';
 import Landscape from './Landscape.js';
 import Termometer from './Termometer.js';
 import Form from './Form';
+import WelcomeScreen from './WelcomeScreen.js';
 import './styles/App.css';
+import useBackgroundChanger from './Hooks.js';
 const axios = require('axios');
 
 const APIKey = '2518179022e0b5718134df51206271e6';
 
 function App() {
   const [cityWeather, setCityWeather] = useState({
-    weatherID: null,
-    timeID: null,
-    temp: null
+    weatherID: '11',
+    timeID: 'n',
+    temp: null,
+    result: 'Check weather forecast!'
+    // weatherID: null,
+    // timeID: 'welcome',
+    // temp: null,
+    // result: 'Check weather forecast!'
   });
+  const { weatherID, timeID, temp, result } = cityWeather;
 
   const getWeather = cityName => {
     axios
@@ -20,7 +28,6 @@ function App() {
         `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&APPID=${APIKey}`
       )
       .then(({ data }) => {
-        console.log(data);
         const typeID = data.weather[0].icon;
 
         const weatherID = typeID.slice(0, 2);
@@ -29,7 +36,8 @@ function App() {
         setCityWeather({
           weatherID,
           timeID,
-          temp
+          temp,
+          result: cityName
         });
       })
       .catch(error => {
@@ -38,17 +46,25 @@ function App() {
           setCityWeather({
             weatherID: 'nowhere',
             timeID: null,
-            temp: null
+            temp: null,
+            result: 'Not found'
           });
         }
       });
   };
-  const { weatherID, timeID, temp } = cityWeather;
+  useBackgroundChanger(timeID, weatherID);
   return (
     <div className="App">
-      {weatherID !== null && <Termometer temp={temp} />}
+      <h1 className="result">{result}</h1>
+      {timeID === 'welcome' ? (
+        <WelcomeScreen></WelcomeScreen>
+      ) : (
+        <>
+          <Landscape weatherID={weatherID} timeID={timeID} />
+          <Termometer temp={temp} />
+        </>
+      )}
       <Form getWeather={getWeather} />
-      <Landscape weatherID={weatherID} timeID={'d'} />
       {/* testy */}
     </div>
   );

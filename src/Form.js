@@ -19,7 +19,6 @@ function Form({ getWeather }) {
       autoComplete="off"
     >
       <h1 className="weather-form__text">
-        Check current weather
         <input
           type="text"
           name="city"
