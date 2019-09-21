@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/weather-app/static/css/main.8a8dc552.chunk.css",
+    "main.js": "/weather-app/static/js/main.2d5f43b6.chunk.js",
+    "main.js.map": "/weather-app/static/js/main.2d5f43b6.chunk.js.map",
+    "runtime~main.js": "/weather-app/static/js/runtime~main.64c1ba9b.js",
+    "runtime~main.js.map": "/weather-app/static/js/runtime~main.64c1ba9b.js.map",
+    "static/js/2.56991a9e.chunk.js": "/weather-app/static/js/2.56991a9e.chunk.js",
+    "static/js/2.56991a9e.chunk.js.map": "/weather-app/static/js/2.56991a9e.chunk.js.map",
+    "index.html": "/weather-app/index.html",
+    "precache-manifest.af8924ec39431e4e7181361071696746.js": "/weather-app/precache-manifest.af8924ec39431e4e7181361071696746.js",
+    "service-worker.js": "/weather-app/service-worker.js",
+    "static/css/main.8a8dc552.chunk.css.map": "/weather-app/static/css/main.8a8dc552.chunk.css.map",
+    "static/media/bright-cloud.png": "/weather-app/static/media/bright-cloud.aba77d5c.png",
+    "static/media/dark-cloud.png": "/weather-app/static/media/dark-cloud.f57e323e.png",
+    "static/media/Landscape.css": "/weather-app/static/media/snow.41e22a77.png",
+    "static/media/grass.png": "/weather-app/static/media/grass.59f9050c.png",
+    "static/media/grass_snow.png": "/weather-app/static/media/grass_snow.4c9bb2c5.png",
+    "static/media/grassland-snow.png": "/weather-app/static/media/grassland-snow.46089f71.png",
+    "static/media/grassland.png": "/weather-app/static/media/grassland.b93b11ad.png",
+    "static/media/lighting.png": "/weather-app/static/media/lighting.2b1cec83.png",
+    "static/media/mist.png": "/weather-app/static/media/mist.d4056aa2.png",
+    "static/media/moon.png": "/weather-app/static/media/moon.3e23f13e.png",
+    "static/media/planet.png": "/weather-app/static/media/planet.b29b17d1.png",
+    "static/media/stars.png": "/weather-app/static/media/stars.45398673.png",
+    "static/media/sun.png": "/weather-app/static/media/sun.87d2ee69.png",
+    "static/media/tumbleweed.png": "/weather-app/static/media/tumbleweed.b766aea6.png"
+  }
+}
