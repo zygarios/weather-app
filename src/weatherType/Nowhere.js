@@ -9,12 +9,22 @@ function Nowhere() {
     <div className="nowhere">
       <img src={mist} alt="mist" className="nowhere__mist" />
       <img
+        src={mist}
+        alt="mist"
+        className="mist__mistitem mist__mistitem--front"
+      />
+      <img
+        src={mist}
+        alt="mist"
+        className="mist__mistitem mist__mistitem--back"
+      />
+      <img
         src={planet}
         alt="planet"
         className="nowhere__planet nowhere__planet--blur"
       />
       <img src={planet} alt="planet" className="nowhere__planet" />
-      <img src={stars} alt="stars" />
+      <img src={stars} className="stars" alt="stars" />
       <DryItem></DryItem>;
     </div>
   );

@@ -5,7 +5,10 @@ import GrassItem from '../weatherType/Items/GrassItem.js';
 function BrokenClouds({ weatherID, darkitem, timeID }) {
   return (
     <div className="broken-clouds">
-      <DarkCloudsItem darkitem={darkitem}></DarkCloudsItem>
+      <DarkCloudsItem
+        weatherID={weatherID}
+        darkitem={darkitem}
+      ></DarkCloudsItem>
       <GrassItem weatherID={weatherID} timeID={timeID}></GrassItem>
     </div>
   );

@@ -746,19 +746,19 @@
   z-index: -7;
 }
 
-.landscape {
-  height: 100%;
-  width: 100%;
-}
-
-.landscape__stars {
-  height: 65%;
+.stars {
+  height: 70%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   position: absolute;
-  z-index: -1;
+  z-index: -5;
   opacity: .75;
+}
+
+.landscape {
+  height: 100%;
+  width: 100%;
 }
 
 .landscape__dry {
@@ -816,8 +816,6 @@
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .grass__grassland {
@@ -826,16 +824,20 @@
   width: 100%;
   height: 40%;
   bottom: 0;
-  left: 0;
   -webkit-filter: blur(1.1px);
           filter: blur(1.1px);
 }
 
 .grass__item {
-  height: 17%;
+  height: 20%;
   position: absolute;
   -webkit-transform-origin: 50% 100%;
           transform-origin: 50% 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 0;
+     object-position: 50% 0;
 }
 
 .grass__item--close {

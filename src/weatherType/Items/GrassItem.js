@@ -16,9 +16,9 @@ function GrassItem({ weatherID, timeID }) {
     darkClass = 'dark-grass';
   }
   let fastClass = null;
-  if (weatherID === '13') {
+  if (weatherID === '13' || weatherID === '04') {
     littleDark = { filter: 'brightness(.7)' };
-  } else if (weatherID * 1 >= 4) {
+  } else if (weatherID * 1 >= 5) {
     fastClass = 'fast';
     littleDark = { filter: 'brightness(.4)' };
   }
@@ -34,7 +34,7 @@ function GrassItem({ weatherID, timeID }) {
   let grass = grassNormal;
 
   let grassland = {
-    backgroundImage: `url(${grasslandNormal})`
+    background: `url(${grasslandNormal}) bottom/cover`
   };
 
   if (weatherID === '10' || weatherID === '09' || weatherID === '11') {
@@ -42,7 +42,7 @@ function GrassItem({ weatherID, timeID }) {
   } else if (weatherID === '13') {
     grass = grassSnow;
     grassland = {
-      backgroundImage: `url(${grasslandSnow})`,
+      background: `url(${grasslandSnow}) top/cover`,
       filter: 'brightness(1.2)'
     };
 
@@ -86,7 +86,7 @@ function GrassItem({ weatherID, timeID }) {
 
       {timeID === 'n' && (
         <>
-          <img src={stars} alt="stars" className="landscape__stars" />
+          <img src={stars} alt="stars" className="stars" />
         </>
       )}
     </>

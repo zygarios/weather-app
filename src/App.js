@@ -11,8 +11,8 @@ const APIKey = '2518179022e0b5718134df51206271e6';
 
 function App() {
   const [cityWeather, setCityWeather] = useState({
-    // weatherID: '01',
-    // timeID: 'n',
+    // weatherID: '04',
+    // timeID: 'd',
     weatherID: null,
     timeID: 'welcome',
     temp: null,
@@ -26,7 +26,6 @@ function App() {
         `https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&APPID=${APIKey}`
       )
       .then(({ data }) => {
-        console.log(data);
         const typeID = data.weather[0].icon;
 
         const weatherID = typeID.slice(0, 2);

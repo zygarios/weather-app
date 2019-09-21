@@ -5,7 +5,7 @@ import brightCloud from '../../img/bright-cloud.png';
 function DarkCloudsItem({ weatherID, darkitem, id }) {
   let cloudType = darkCloud;
   let changePositionToTop = null;
-  if (weatherID === '13') {
+  if (weatherID === '13' || weatherID === '04') {
     cloudType = brightCloud;
     changePositionToTop = { top: '-40%' };
   }
