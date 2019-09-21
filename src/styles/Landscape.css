@@ -764,10 +764,7 @@
   bottom: 0;
   -webkit-transform-origin: 50% 100%;
           transform-origin: 50% 100%;
-}
-
-.landscape__dry {
-  background: url("../img/dryland.png") no-repeat top;
+  background: url("../img/dryland.png") no-repeat top/cover;
 }
 
 .landscape__tumbleweed {
