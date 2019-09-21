@@ -9,6 +9,7 @@ import Rain from './weatherType/Rain.js';
 import HeavyRain from './weatherType/HeavyRain.js';
 import Thunderstorm from './weatherType/Thunderstorm.js';
 import Snow from './weatherType/Snow.js';
+import Mist from './weatherType/Mist.js';
 import Nowhere from './weatherType/Nowhere.js';
 
 function Landscape({ weatherID, timeID }) {
@@ -74,7 +75,14 @@ function Landscape({ weatherID, timeID }) {
       );
       break;
     case '13':
-      showWeather = <Snow timeID={timeID} darkitem={darkitem}></Snow>;
+      showWeather = (
+        <Snow weatherID={weatherID} timeID={timeID} darkitem={darkitem}></Snow>
+      );
+      break;
+    case '50':
+      showWeather = (
+        <Mist weatherID={weatherID} timeID={timeID} darkitem={darkitem}></Mist>
+      );
       break;
     case 'nowhere':
       showWeather = <Nowhere></Nowhere>;

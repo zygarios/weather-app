@@ -1,33 +1,45 @@
 import React from 'react';
 import darkCloud from '../../img/dark-cloud.png';
+import brightCloud from '../../img/bright-cloud.png';
 
-function DarkCloudsItem({ darkitem, id }) {
+function DarkCloudsItem({ weatherID, darkitem, id }) {
+  let cloudType = darkCloud;
+  let changePositionToTop = null;
+  if (weatherID === '13') {
+    cloudType = brightCloud;
+    changePositionToTop = { top: '-40%' };
+  }
   return (
     <div className={`dark-clouds dark-clouds--${id}`}>
       <img
         className={`dark-clouds__cloud ${darkitem}`}
-        src={darkCloud}
+        src={cloudType}
         alt="dark-cloud"
+        style={changePositionToTop}
       />
       <img
         className={`dark-clouds__cloud ${darkitem}`}
-        src={darkCloud}
+        src={cloudType}
         alt="dark-cloud"
+        style={changePositionToTop}
       />
       <img
         className={`dark-clouds__cloud ${darkitem}`}
-        src={darkCloud}
+        src={cloudType}
         alt="dark-cloud"
+        style={changePositionToTop}
       />
       <img
         className={`dark-clouds__cloud ${darkitem}`}
-        src={darkCloud}
+        src={cloudType}
         alt="dark-cloud"
+        style={changePositionToTop}
       />
       <img
         className={`dark-clouds__cloud ${darkitem}`}
-        src={darkCloud}
+        src={cloudType}
         alt="dark-cloud"
+        style={changePositionToTop}
       />
     </div>
   );

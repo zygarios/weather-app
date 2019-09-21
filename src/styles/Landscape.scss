@@ -58,7 +58,7 @@
 
 @keyframes welcomeCloudMoveBack {
   from {
-    left: 50%
+    left: 50%;
   }
 
   to {
@@ -106,64 +106,64 @@
 
 @keyframes grassWind-close {
   0% {
-    transform: translate(-50%, 20%) scale(2) skew(-6deg);
+    transform: translate(0, 20%) scale(2) skew(-6deg);
   }
 
   50% {
-    transform: translate(-50%, 20%) scale(2) skew(6deg);
+    transform: translate(0, 20%) scale(2) skew(6deg);
   }
 
   100% {
-    transform: translate(-50%, 20%) scale(2) skew(-6deg);
+    transform: translate(0, 20%) scale(2) skew(-6deg);
   }
 }
 
 @keyframes grassWind-normal {
   0% {
-    transform: translate(-50%, 20%) scale(1.75) skew(6deg);
+    transform: translate(0, 20%) scale(1.75) skew(6deg);
   }
 
   50% {
-    transform: translate(-50%, 20%) scale(1.75) skew(-6deg);
+    transform: translate(0, 20%) scale(1.75) skew(-6deg);
   }
 
   100% {
-    transform: translate(-50%, 20%) scale(1.75) skew(6deg);
+    transform: translate(0, 20%) scale(1.75) skew(6deg);
   }
 }
 
 @keyframes grassWind-far {
   0% {
-    transform: translate(-50%, 20%) scale(1.5) skew(-6deg);
+    transform: translate(0, 20%) scale(1.5) skew(-6deg);
   }
 
   50% {
-    transform: translate(-50%, 20%) scale(1.5) skew(6deg);
+    transform: translate(0, 20%) scale(1.5) skew(6deg);
   }
 
   100% {
-    transform: translate(-50%, 20%) scale(1.5) skew(-6deg);
+    transform: translate(0, 20%) scale(1.5) skew(-6deg);
   }
 }
 
 @keyframes grassWind-very-far {
   0% {
-    transform: translate(-50%, 20%) scale(1.25) skew(6deg);
+    transform: translate(0, 20%) scale(1.25) skew(6deg);
   }
 
   50% {
-    transform: translate(-50%, 20%) scale(1.25) skew(-6deg);
+    transform: translate(0, 20%) scale(1.25) skew(-6deg);
   }
 
   100% {
-    transform: translate(-50%, 20%) scale(1.25) skew(6deg);
+    transform: translate(0, 20%) scale(1.25) skew(6deg);
   }
 }
 
 //fast
 @keyframes grassWind-close-fast {
   0% {
-    transform: translate(0%, 20%) scale(2) skew(12deg);
+    transform: translate(0%, 20%) scale(2) skew(16deg);
   }
 
   25% {
@@ -171,7 +171,7 @@
   }
 
   50% {
-    transform: translate(0%, 20%) scale(2) skew(7deg);
+    transform: translate(0%, 20%) scale(2) skew(12deg);
   }
 
   75% {
@@ -179,13 +179,13 @@
   }
 
   100% {
-    transform: translate(0%, 20%) scale(2) skew(12deg);
+    transform: translate(0%, 20%) scale(2) skew(16deg);
   }
 }
 
 @keyframes grassWind-normal-fast {
   0% {
-    transform: translate(0%, 20%) scale(1.75) skew(12deg);
+    transform: translate(0%, 20%) scale(1.75) skew(16deg);
   }
 
   25% {
@@ -193,7 +193,7 @@
   }
 
   50% {
-    transform: translate(0%, 20%) scale(1.75) skew(7deg);
+    transform: translate(0%, 20%) scale(1.75) skew(12deg);
   }
 
   75% {
@@ -201,13 +201,13 @@
   }
 
   100% {
-    transform: translate(0%, 20%) scale(1.75) skew(12deg);
+    transform: translate(0%, 20%) scale(1.75) skew(16deg);
   }
 }
 
 @keyframes grassWind-far-fast {
   0% {
-    transform: translate(0%, 20%) scale(1.5) skew(12deg);
+    transform: translate(0%, 20%) scale(1.5) skew(16deg);
   }
 
   25% {
@@ -215,7 +215,7 @@
   }
 
   50% {
-    transform: translate(0%, 20%) scale(1.5) skew(7deg);
+    transform: translate(0%, 20%) scale(1.5) skew(12deg);
   }
 
   75% {
@@ -223,13 +223,13 @@
   }
 
   100% {
-    transform: translate(0%, 20%) scale(1.5) skew(12deg);
+    transform: translate(0%, 20%) scale(1.5) skew(16deg);
   }
 }
 
 @keyframes grassWind-very-far-fast {
   0% {
-    transform: translate(0%, 20%) scale(1.25) skew(12deg);
+    transform: translate(0%, 20%) scale(1.25) skew(16deg);
   }
 
   25% {
@@ -237,7 +237,7 @@
   }
 
   50% {
-    transform: translate(0%, 20%) scale(1.25) skew(7deg);
+    transform: translate(0%, 20%) scale(1.25) skew(12deg);
   }
 
   75% {
@@ -245,7 +245,7 @@
   }
 
   100% {
-    transform: translate(0%, 20%) scale(1.25) skew(12deg);
+    transform: translate(0%, 20%) scale(1.25) skew(16deg);
   }
 }
 
@@ -299,13 +299,23 @@
   }
 }
 
-@keyframes nowhereMistAnim {
+@keyframes nowhereMistAnimFront {
   from {
-    left: -45%;
+    left: 0%;
   }
 
   to {
-    left: 0;
+    left: -100%;
+  }
+}
+
+@keyframes nowhereMistAnimBack {
+  from {
+    left: 0%;
+  }
+
+  to {
+    left: -50%;
   }
 }
 
@@ -337,16 +347,15 @@
   top: 20%;
   left: 20%;
   transform: translate(-50%, -50%);
-  z-index: 0;
-  filter: brightness(.75);
+  z-index: -1;
+  filter: brightness(0.75);
 
   &--glow {
     filter: blur(30px) brightness(1.5);
-    opacity: .6;
+    opacity: 0.6;
     z-index: 1;
   }
 }
-
 
 .birds {
   width: 200px;
@@ -356,17 +365,15 @@
   animation: birdsAnim 40s linear 0s infinite;
 }
 
-
 .welcome {
   .sun-item {
     left: 70%;
     top: 35%;
-    animation: sunMove 250s linear 0s 1;
+    animation: sunMove 250s linear 0s infinite;
     z-index: -5;
 
-
     &__sun {
-      opacity: .9;
+      opacity: 0.9;
     }
 
     &__glow {
@@ -374,7 +381,7 @@
       left: 60%;
       filter: blur(350px);
       background: rgb(255, 157, 0);
-      opacity: .8;
+      opacity: 0.8;
       z-index: 7;
     }
   }
@@ -387,7 +394,6 @@
     animation: birdsAnimWelcome 35s linear 0s infinite reverse;
   }
 
-
   &__welcome-cloud {
     position: absolute;
     top: 60%;
@@ -397,33 +403,29 @@
     &--front {
       transform: translate(-50%, -50%) scaleX(1.25) scaleY(1) skew(10deg);
       top: 55%;
-      opacity: .7;
+      opacity: 0.7;
       left: 30%;
-      animation: welcomeCloudMoveFront 360s linear 0s;
+      animation: welcomeCloudMoveFront 360s linear 0s infinite;
       z-index: -4;
     }
 
     &--middle {
       transform: translate(-50%, -50%) scaleX(1.75) scaleY(1.5) skewx(10deg);
-      opacity: .9;
+      opacity: 0.9;
       left: 40%;
-      animation: welcomeCloudMoveMiddle 360s linear 0s 1;
+      animation: welcomeCloudMoveMiddle 360s linear 0s infinite;
       z-index: -5;
     }
-
 
     &--back {
       transform: translate(-50%, -50%) scaleX(2.5) scaleY(2);
       opacity: 1;
       left: 50%;
-      animation: welcomeCloudMoveBack 360s linear 0s 1;
+      animation: welcomeCloudMoveBack 360s linear 0s infinite;
       z-index: -7;
     }
   }
 }
-
-
-
 
 .landscape {
   height: 100%;
@@ -442,10 +444,8 @@
     transform-origin: 50% 100%;
   }
 
-
-
   &__dry {
-    background: url("../img/dryland.png") no-repeat top;
+    background: url('../img/dryland.png') no-repeat top;
   }
 
   &__tumbleweed {
@@ -460,19 +460,18 @@
     }
 
     &--shadow {
-      filter: blur(2px) brightness(.2);
+      filter: blur(2px) brightness(0.2);
       animation: tumbleweedAnim 15s linear 0s infinite;
     }
 
     &--shadow3d {
-      filter: blur(1px) brightness(.1);
+      filter: blur(1px) brightness(0.1);
       transform-origin: 50% 50%;
       bottom: 15%;
       transform: rotateX(60deg) rotateZ(0deg);
       animation: tumbleweedAnim3dShadow 15s linear 0s infinite;
     }
   }
-
 
   .dark-clouds {
     width: 100%;
@@ -489,7 +488,7 @@
   object-fit: cover;
 
   &__grassland {
-    background: url("../img/grassland.png") no-repeat top;
+    background: no-repeat top;
     position: absolute;
     width: 100%;
     height: 40%;
@@ -507,7 +506,7 @@
       bottom: 0;
       z-index: 14;
       transform: translate(0, 20%) scale(2) skew(0deg);
-      filter: blur(.5px) brightness(1.15);
+      filter: blur(0.5px) brightness(1.15);
       animation: grassWind-close 4s ease-in-out 0s infinite normal;
     }
 
@@ -515,7 +514,7 @@
       bottom: 11%;
       z-index: 13;
       transform: translate(0, 20%) scale(1.75);
-      filter: blur(.3px) brightness(1);
+      filter: blur(0.3px) brightness(1);
       animation: grassWind-normal 4s ease-in-out 0s infinite normal;
     }
 
@@ -523,7 +522,7 @@
       bottom: 21%;
       z-index: 12;
       transform: translate(0, 20%) scale(1.5);
-      filter: blur(.15px) brightness(.85);
+      filter: blur(0.15px) brightness(0.85);
       animation: grassWind-far 4s ease-in-out 0s infinite normal;
     }
 
@@ -531,7 +530,7 @@
       bottom: 30%;
       z-index: 11;
       transform: translate(0, 20%) scale(1.25);
-      filter: blur(0) brightness(.7);
+      filter: blur(0) brightness(0.7);
       animation: grassWind-very-far 4s ease-in-out 0s infinite normal;
     }
   }
@@ -553,7 +552,6 @@
   &--very-far {
     animation: grassWind-very-far-fast 2.5s ease-in-out 0s infinite normal;
   }
-
 }
 
 @keyframes darkCloudAnimOne {
@@ -562,7 +560,7 @@
   }
 
   100% {
-    right: 150%;
+    right: 100%;
   }
 }
 
@@ -572,7 +570,7 @@
   }
 
   100% {
-    right: 150%;
+    right: 100%;
   }
 }
 
@@ -582,7 +580,7 @@
   }
 
   100% {
-    right: 150%;
+    right: 100%;
   }
 }
 
@@ -592,7 +590,7 @@
   }
 
   100% {
-    right: 150%;
+    right: 100%;
   }
 }
 
@@ -602,46 +600,41 @@
   }
 
   100% {
-    right: 150%;
+    right: 100%;
   }
 }
 
-
 .dark-clouds {
-
-
   &__cloud {
     position: absolute;
     z-index: 2;
-    opacity: .9;
-    top: -20%;
+    opacity: 0.9;
+    top: -30%;
     width: 165vh;
 
     &:nth-child(1) {
-      animation: darkCloudAnimOne 50s linear 0s both;
+      animation: darkCloudAnimOne 40s linear 0s infinite both;
     }
 
     &:nth-child(2) {
-      animation: darkCloudAnimTwo 50s linear 0s both;
+      animation: darkCloudAnimTwo 40s linear 0s infinite both;
     }
 
     &:nth-child(3) {
-      animation: darkCloudAnimThree 50s linear 0s both;
+      animation: darkCloudAnimThree 40s linear 0s infinite both;
       transform: scale(1.1);
       z-index: 5;
     }
 
     &:nth-child(4) {
-      animation: darkCloudAnimFour 50s linear 0s both;
-
+      animation: darkCloudAnimFour 40s linear 0s infinite both;
     }
 
     &:nth-child(5) {
-      animation: darkCloudAnimFive 50s linear 0s both;
+      animation: darkCloudAnimFive 40s linear 0s infinite both;
       transform: scale(1.1);
       z-index: 5;
     }
-
   }
 }
 
@@ -656,13 +649,13 @@
   &__cloud {
     position: absolute;
     z-index: 10;
-    opacity: .9;
+    opacity: 0.9;
 
     &:nth-child(1) {
       width: 300px;
       top: 18%;
       right: 60%;
-      animation: cloudAnimOne 40s linear 0s both;
+      animation: cloudAnimOne 40s linear 0s infinite both;
     }
 
     &:nth-child(2) {
@@ -671,7 +664,7 @@
       right: 50%;
       z-index: 1;
       transform: scaleX(-1);
-      animation: cloudAnimTwo 100s linear 0s both;
+      animation: cloudAnimTwo 100s linear 0s infinite both;
     }
 
     &:nth-child(3) {
@@ -679,7 +672,7 @@
       top: 25%;
       right: 35%;
       z-index: 1;
-      animation: cloudAnimThree 75s linear 0s both;
+      animation: cloudAnimThree 75s linear 0s both infinite;
     }
 
     &:nth-child(4) {
@@ -688,14 +681,14 @@
       right: 10%;
       z-index: 4;
       transform: scaleX(-1);
-      animation: cloudAnimFour 70s linear 0s both;
+      animation: cloudAnimFour 70s linear 0s both infinite;
     }
 
     &:nth-child(5) {
       width: 150px;
       top: 33%;
       right: 5%;
-      animation: cloudAnimFive 150s linear 0s both;
+      animation: cloudAnimFive 150s linear 0s both infinite;
     }
   }
 
@@ -712,7 +705,6 @@
 
     .bright-clouds__cloud {
       transform: scaleX(3) scaleY(3) translate(30%, 0%);
-
     }
   }
 }
@@ -725,7 +717,6 @@
   to {
     background: url('../img/rain.png') 100% 0%;
   }
-
 }
 
 @keyframes heavyRainAnim {
@@ -736,7 +727,6 @@
   to {
     background: url('../img/heavy-rain.png') 100% 0%;
   }
-
 }
 
 .rain-item {
@@ -779,7 +769,6 @@
 
 .heavy-rain,
 .thunderstorm {
-
   .rain-item {
     &--front {
       animation: heavyRainAnim 8s linear 0s infinite;
@@ -791,7 +780,6 @@
 
     &--back {
       animation: heavyRainAnim 16s linear 0s infinite;
-
     }
   }
 }
@@ -810,7 +798,7 @@
   }
 
   48% {
-    opacity: .75;
+    opacity: 0.75;
   }
 
   50% {
@@ -818,7 +806,7 @@
   }
 
   52% {
-    opacity: .75;
+    opacity: 0.75;
   }
 
   54% {
@@ -872,8 +860,7 @@
   }
 }
 
-
-.thunderstorm {
+.thunderstorm__lighting {
   animation: lightingGlowAnim 5s linear 0s infinite;
 }
 
@@ -882,7 +869,7 @@
   max-height: 80vh;
   top: 0;
   z-index: 12;
-  filter: drop-shadow(0px 0px 150px white) blur(.5px);
+  filter: drop-shadow(0px 0px 150px white) blur(0.5px);
   transform: translateX(-50%) scaleX(1.35);
   left: 50%;
   animation: lightingAnim 5s linear 0s infinite both;
@@ -907,44 +894,94 @@
     width: 150%;
     height: 120%;
     transform: scaleY(-1);
-    animation: nowhereMistAnim 30s linear 0s;
-  }
-
-  &__sign {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    width: 150px;
-    z-index: 5;
-    filter: drop-shadow(5px 5px 3px black);
+    animation: nowhereMistAnim 30s linear 0s infinite;
   }
 }
 
-
 .dark-grass {
-
   &-2 {
-    filter: brightness(.45) blur(0px);
+    filter: brightness(0.45) blur(0px);
   }
 
   &-3 {
-    filter: brightness(.35) blur(.25px);
+    filter: brightness(0.35) blur(0.25px);
   }
 
   &-4 {
-    filter: brightness(.25) blur(.5px);
+    filter: brightness(0.25) blur(0.5px);
   }
 
   &-5 {
-    filter: brightness(.10) blur(.75px);
+    filter: brightness(0.1) blur(0.75px);
   }
 
   &-1 {
-    filter: brightness(.01) blur(1px);
-
+    filter: brightness(0.01) blur(1px);
   }
 }
 
 .darkitem {
-  filter: brightness(.3);
+  filter: brightness(0.3);
+}
+
+.mist {
+  &__mistitem {
+    position: absolute;
+    bottom: 0;
+    left: -35%;
+    z-index: 6;
+    width: 150%;
+    height: 130%;
+    transform: scaleY(-1);
+    opacity: 0.8;
+
+    &--front {
+      animation: nowhereMistAnimFront 25s linear 0s infinite;
+      bottom: -20%;
+      width: 200%;
+      height: 110%;
+    }
+
+    &--back {
+      animation: nowhereMistAnimBack 25s linear 0s reverse infinite;
+    }
+  }
+}
+
+@keyframes snowFallingAnim {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: -500% 1000%;
+  }
+}
+
+.snow-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('../img/snow.png') repeat;
+  background-size: 30%;
+  background-position: 100% 0;
+  animation: snowFallingAnim 100s linear 0s infinite;
+
+  &--front {
+    filter: blur(1.5px);
+    z-index: 14;
+    transform: scale(3);
+  }
+
+  &--middle {
+    filter: blur(1px);
+    z-index: 13;
+    transform: scale(2);
+  }
+
+  &--back {
+    z-index: 12;
+    filter: blur(1.5px);
+    transform: scale(1);
+  }
 }

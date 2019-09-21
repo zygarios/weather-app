@@ -1,9 +1,13 @@
 import React from 'react';
-import grass from '../../img/grass.png';
+import grassNormal from '../../img/grass.png';
 import stars from '../../img/stars.png';
 import SunItem from './SunItem.js';
 import MoonItem from './MoonItem.js';
-import RainItem from './RainItem';
+import RainItem from './RainItem.js';
+import SnowItem from './SnowItem.js';
+import grassSnow from '../../img/grass_snow.png';
+import grasslandSnow from '../../img/grassland-snow.png';
+import grasslandNormal from '../../img/grassland.png';
 
 function GrassItem({ weatherID, timeID }) {
   let darkClass = null;
@@ -12,7 +16,9 @@ function GrassItem({ weatherID, timeID }) {
     darkClass = 'dark-grass';
   }
   let fastClass = null;
-  if (weatherID * 1 >= 4) {
+  if (weatherID === '13') {
+    littleDark = { filter: 'brightness(.7)' };
+  } else if (weatherID * 1 >= 4) {
     fastClass = 'fast';
     littleDark = { filter: 'brightness(.4)' };
   }
@@ -24,14 +30,32 @@ function GrassItem({ weatherID, timeID }) {
     sunMoon = <MoonItem></MoonItem>;
   }
 
-  let rain = null;
+  let rainOrSnow = null;
+  let grass = grassNormal;
+
+  let grassland = {
+    backgroundImage: `url(${grasslandNormal})`
+  };
+
   if (weatherID === '10' || weatherID === '09' || weatherID === '11') {
-    rain = <RainItem timeID={timeID}></RainItem>;
+    rainOrSnow = <RainItem timeID={timeID}></RainItem>;
+  } else if (weatherID === '13') {
+    grass = grassSnow;
+    grassland = {
+      backgroundImage: `url(${grasslandSnow})`,
+      filter: 'brightness(1.2)'
+    };
+
+    rainOrSnow = <SnowItem timeID={timeID}></SnowItem>;
   }
+
   return (
     <>
       <div className="grass" style={littleDark}>
-        <div className={`grass__grassland ${darkClass + '-1'}`} />
+        <div
+          className={`grass__grassland ${darkClass + '-1'}`}
+          style={grassland}
+        />
         <img
           className={`grass__item grass__item--close ${darkClass +
             '-2'} ${fastClass}`}
@@ -56,7 +80,7 @@ function GrassItem({ weatherID, timeID }) {
           src={grass}
           alt="grass"
         />
-        {rain}
+        {rainOrSnow}
       </div>
       {sunMoon}
 

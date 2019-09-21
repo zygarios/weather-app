@@ -3,8 +3,8 @@ import { useEffect } from 'react';
 const useBackgroundChanger = (timeID, weatherID) => {
   useEffect(() => {
     const app = document.querySelector('.App');
-    if (timeID === 'n' || timeID === null) {
-      app.style = 'background: linear-gradient(rgb(0, 0, 0), rgb(56, 56, 56));';
+    if (timeID === 'n' || weatherID === 'nowhere') {
+      app.style = 'background: linear-gradient(rgb(0, 0, 0), rgb(40, 40, 40));';
     } else if (timeID === 'd') {
       if (weatherID * 1 < 4) {
         app.style =

@@ -11,14 +11,12 @@ const APIKey = '2518179022e0b5718134df51206271e6';
 
 function App() {
   const [cityWeather, setCityWeather] = useState({
-    weatherID: '11',
-    timeID: 'n',
+    // weatherID: 'nowhere',
+    // timeID: 'd',
+    weatherID: null,
+    timeID: 'welcome',
     temp: null,
     result: 'Check weather forecast!'
-    // weatherID: null,
-    // timeID: 'welcome',
-    // temp: null,
-    // result: 'Check weather forecast!'
   });
   const { weatherID, timeID, temp, result } = cityWeather;
 
@@ -55,7 +53,7 @@ function App() {
   useBackgroundChanger(timeID, weatherID);
   return (
     <div className="App">
-      <h1 className="result">{result}</h1>
+      <h1 className="App__result">{result}</h1>
       {timeID === 'welcome' ? (
         <WelcomeScreen></WelcomeScreen>
       ) : (
@@ -65,7 +63,6 @@ function App() {
         </>
       )}
       <Form getWeather={getWeather} />
-      {/* testy */}
     </div>
   );
 }

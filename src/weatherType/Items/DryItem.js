@@ -1,5 +1,4 @@
 import React from 'react';
-
 import tumbleweed from '../../img/tumbleweed.png';
 
 function DryItem() {
