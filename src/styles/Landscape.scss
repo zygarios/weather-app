@@ -432,8 +432,12 @@
   width: 100%;
 
   &__stars {
-    height: 100%;
+    height: 65%;
+    width: 100%;
     object-fit: cover;
+    position: absolute;
+    z-index: -1;
+    opacity: .75;
   }
 
   &__dry {
@@ -442,10 +446,7 @@
     height: 40%;
     bottom: 0;
     transform-origin: 50% 100%;
-  }
-
-  &__dry {
-    background: url('../img/dryland.png') no-repeat top;
+    background: url('../img/dryland.png') no-repeat top/cover;
   }
 
   &__tumbleweed {
@@ -480,7 +481,6 @@
 
 .grass {
   position: absolute;
-
   height: 100vh;
   width: 100%;
   left: 50%;

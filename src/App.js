@@ -11,8 +11,8 @@ const APIKey = '2518179022e0b5718134df51206271e6';
 
 function App() {
   const [cityWeather, setCityWeather] = useState({
-    // weatherID: 'nowhere',
-    // timeID: 'd',
+    // weatherID: '01',
+    // timeID: 'n',
     weatherID: null,
     timeID: 'welcome',
     temp: null,
@@ -23,9 +23,10 @@ function App() {
   const getWeather = cityName => {
     axios
       .get(
-        `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&APPID=${APIKey}`
+        `https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&APPID=${APIKey}`
       )
       .then(({ data }) => {
+        console.log(data);
         const typeID = data.weather[0].icon;
 
         const weatherID = typeID.slice(0, 2);
@@ -39,6 +40,7 @@ function App() {
         });
       })
       .catch(error => {
+        console.log(error);
         const status = error.response.status;
         if (status === 404) {
           setCityWeather({

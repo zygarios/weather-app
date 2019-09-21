@@ -752,9 +752,13 @@
 }
 
 .landscape__stars {
-  height: 100%;
+  height: 65%;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  position: absolute;
+  z-index: -1;
+  opacity: .75;
 }
 
 .landscape__dry {
@@ -764,10 +768,7 @@
   bottom: 0;
   -webkit-transform-origin: 50% 100%;
           transform-origin: 50% 100%;
-}
-
-.landscape__dry {
-  background: url("../img/dryland.png") no-repeat top;
+  background: url("../img/dryland.png") no-repeat top/cover;
 }
 
 .landscape__tumbleweed {
